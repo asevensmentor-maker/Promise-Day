@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Promise Day 💖</title>
+
+  <!-- Handwriting font -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Handlee&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Hearts -->
-<div class="hearts"></div>
-
-<!-- Envelope -->
-<div id="envelope" class="envelope">
+<div class="envelope" id="envelope">
   <div class="flap"></div>
-  <div class="letter" id="firstLetter">
+
+  <div class="letter">
     <h2>💌 A Letter For You</h2>
     <p>Will you open it?</p>
-    <button onclick="yesClick()">Yes</button>
-    <button onclick="noClick()">No</button>
+    <p class="hint">(Saying NO might make the letter shy 😌)</p>
+
+    <div class="buttons">
+      <button onclick="yesClick()">Yes</button>
+      <button onclick="noClick()">No</button>
+    </div>
   </div>
 </div>
 
-<!-- Lock Screen -->
+<!-- Lock -->
 <div id="lockScreen" class="card hidden">
   <h2>🔒 Locked</h2>
   <p>Enter the name you gave me<br><small>(my favorite one 💕)</small></p>
-  <input type="text" id="secretName" placeholder="Enter name">
+  <input type="text" id="secretName" placeholder="Type here">
   <button onclick="unlock()">Unlock</button>
   <p id="error"></p>
 </div>
 
 <!-- Final Letter -->
 <div id="finalLetter" class="card hidden">
-  <h2>💖 My Promises To You 💖</h2>
+  <h2>💖 My Promises 💖</h2>
   <p id="typingText"></p>
 </div>
 
