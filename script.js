@@ -32,6 +32,7 @@ function unlock() {
   const error = document.getElementById("error");
 
   if (allowedNames.includes(input)) {
+    error.textContent = "";
     document.getElementById("lockScreen").classList.add("hidden");
     document.getElementById("celebration").classList.remove("hidden");
 
@@ -48,6 +49,7 @@ function unlock() {
 function typeText() {
   let i = 0;
   const target = document.getElementById("typingText");
+  target.innerHTML = "";
 
   function type() {
     if (i < promisesText.length) {
