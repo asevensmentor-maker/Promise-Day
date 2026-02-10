@@ -5,40 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Promise Day 💖</title>
 
-  <!-- Handwriting font -->
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Handlee&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- Envelope -->
 <div class="envelope" id="envelope">
+  <div class="balloon">🎈</div>
   <div class="flap"></div>
 
   <div class="letter">
     <h2>💌 A Letter For You</h2>
     <p>Will you open it?</p>
-    <p class="hint">(Saying NO might make the letter shy 😌)</p>
+    <p class="warning hidden" id="warning">
+      ⚠️ Catch the balloon! Press YES
+    </p>
 
-    <div class="buttons">
-      <button onclick="yesClick()">Yes</button>
-      <button onclick="noClick()">No</button>
-    </div>
+    <button onclick="yesClick()">Yes</button>
+    <button onclick="noClick()">No</button>
   </div>
 </div>
 
-<!-- Lock -->
+<!-- Lock Screen -->
 <div id="lockScreen" class="card hidden">
   <h2>🔒 Locked</h2>
-  <p>Enter the name you gave me<br><small>(my favorite one 💕)</small></p>
-  <input type="text" id="secretName" placeholder="Type here">
+  <p>Enter the name you gave me 💕</p>
+  <input id="secretName" placeholder="Type here">
   <button onclick="unlock()">Unlock</button>
   <p id="error"></p>
 </div>
 
+<!-- Happy Promise Day -->
+<div id="celebration" class="card hidden">
+  <h2>💖 Happy Promise Day 💖</h2>
+</div>
+
 <!-- Final Letter -->
-<div id="finalLetter" class="card hidden">
-  <h2>💖 My Promises 💖</h2>
+<div id="finalLetter" class="final-letter hidden">
+  <span class="flower tl">🌸</span>
+  <span class="flower tr">🌼</span>
+  <span class="flower bl">🌷</span>
+  <span class="flower br">🌹</span>
+
+  <h2>My Promises 💌</h2>
   <p id="typingText"></p>
 </div>
 
