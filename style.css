@@ -1,0 +1,92 @@
+body {
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Hearts animation */
+.hearts::before {
+  content: "💖 💕 💗 💓 💘";
+  position: absolute;
+  animation: float 6s infinite linear;
+  font-size: 24px;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh); opacity: 1; }
+  100% { transform: translateY(-10vh); opacity: 0; }
+}
+
+/* Envelope */
+.envelope {
+  position: relative;
+  width: 320px;
+  height: 220px;
+  background: #ff4b5c;
+  border-radius: 10px;
+}
+
+.flap {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  background: #ff6f7d;
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  transition: transform 1s;
+  transform-origin: top;
+}
+
+.envelope.open .flap {
+  transform: rotateX(180deg);
+}
+
+.letter {
+  position: absolute;
+  background: white;
+  width: 90%;
+  height: 80%;
+  top: 10%;
+  left: 5%;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #ff4b5c;
+  color: white;
+  font-size: 16px;
+}
+
+input {
+  padding: 8px;
+  width: 80%;
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+#error {
+  color: red;
+}
