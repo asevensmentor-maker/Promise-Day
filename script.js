@@ -1,25 +1,33 @@
-const allowedNames = ["makdya", "MAKDYA", "Makdya"];
+const allowedNames = ["makdya", "Makdya", "MAKDYA"];
 
 const promisesText = `
-I promise to stand by you 💕
-I promise to make you smile 😊
-I promise to respect and support you 🌸
-I promise to love you, always 💍
+“I promise effort.”
+“I promise honesty.”
+“I promise patience."
+"I promise to stand by you 💕"
+"I promise to make you smile 😊"
+"I promise to respect and support you 🌸"
+"I promise to love you 💍"
+"I promise to be your safe place on your best days ☀️
+and on your worst ones 🌙💖"
 `;
 
 function noClick() {
-  const letter = document.getElementById("envelope");
-  letter.style.visibility = "hidden";
+  const env = document.getElementById("envelope");
+  env.style.transform = "translateX(-120%) rotate(-8deg)";
 
   setTimeout(() => {
-    letter.style.visibility = "visible";
-  }, 3000);
+    env.style.transform = "translateX(0) rotate(0)";
+    alert("Hmm… NO is not available today 😌💖");
+  }, 900);
 }
 
 function yesClick() {
-  document.getElementById("envelope").classList.add("open");
+  const env = document.getElementById("envelope");
+  env.classList.add("open");
+
   setTimeout(() => {
-    document.getElementById("envelope").classList.add("hidden");
+    env.classList.add("hidden");
     document.getElementById("lockScreen").classList.remove("hidden");
   }, 1000);
 }
@@ -31,15 +39,15 @@ function unlock() {
   if (allowedNames.includes(input)) {
     document.getElementById("lockScreen").classList.add("hidden");
     document.getElementById("finalLetter").classList.remove("hidden");
-    typePromises();
+    typeText();
   } else {
-    error.textContent = "Wrong name 💔 Try again";
+    error.textContent = "That’s not it 😔 Try again";
   }
 }
 
-function typePromises() {
+function typeText() {
   let i = 0;
-  const speed = 50;
+  const speed = 45;
   const target = document.getElementById("typingText");
 
   function typing() {
