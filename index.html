@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Promise Day 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Hearts -->
+<div class="hearts"></div>
+
+<!-- Envelope -->
+<div id="envelope" class="envelope">
+  <div class="flap"></div>
+  <div class="letter" id="firstLetter">
+    <h2>💌 A Letter For You</h2>
+    <p>Will you open it?</p>
+    <button onclick="yesClick()">Yes</button>
+    <button onclick="noClick()">No</button>
+  </div>
+</div>
+
+<!-- Lock Screen -->
+<div id="lockScreen" class="card hidden">
+  <h2>🔒 Locked</h2>
+  <p>Enter the name you gave me<br><small>(my favorite one 💕)</small></p>
+  <input type="text" id="secretName" placeholder="Enter name">
+  <button onclick="unlock()">Unlock</button>
+  <p id="error"></p>
+</div>
+
+<!-- Final Letter -->
+<div id="finalLetter" class="card hidden">
+  <h2>💖 My Promises To You 💖</h2>
+  <p id="typingText"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
