@@ -1,15 +1,14 @@
 const allowedNames = ["makdya", "Makdya", "MAKDYA"];
 
 const promisesText = `
-I promise effort.<br>
-I promise honesty.<br>
-I promise patience.<br>
-I promise you.<br>
-I promise to be your safe place on your best days ☀️ and on your worst ones 🌙💖<br>
-I promise to stand by you.<br>
-I promise to make you smile.<br>
-I promise to respect and support you.<br>
-I promise to love you 💍
+I promise effort 💞.
+I promise honesty☺️.
+I promise patience💝.
+I promise to be your safe place on your best days ☀️ and on your worst ones 🌙💖.
+I promise to stand by you👩‍❤️‍👨.
+I promise to make you smile😊.
+I promise to respect and support you🙇❤️.
+I promise to love you ❤️💍.
 `;
 
 
